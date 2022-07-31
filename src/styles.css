@@ -1,0 +1,33 @@
+body {
+  font-family: "Rubik Moonrocks", cursive;
+  background-image: url("src/image/sky.jpg");
+  background-repeat: inherit;
+  background-size: 100%;
+}
+
+.current-city,
+.new {
+  color: #0b5ed7;
+}
+h1 {
+  text-align: center;
+}
+
+.different {
+  font-family: "Fascinate", cursive;
+  font-weight: 400;
+}
+
+.sky,
+.day {
+  font-size: 30px;
+}
+
+form {
+  text-align: right;
+}
+
+#cel,
+#fahr {
+  color: black;
+}
