@@ -34,5 +34,6 @@ form {
 
 #git {
   display: block;
-  margin: 0 auto;
+  margin: 0;
+  text-align: center;
 }
