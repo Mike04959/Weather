@@ -73,14 +73,14 @@ function convertCel() {
   event.preventDefault();
   let temperature = document.querySelector("#current-temperature");
   let celTemp = 25;
-  temperature.innerHTML = `${celTemp}`;
+  temperature.innerHTML = `${celTemp}°`;
 }
 function convertFahr() {
   event.preventDefault();
   let temperature = document.querySelector("#current-temperature");
   let celTemp = 25;
   let fahrTemp = Math.round((celTemp * 9) / 5 + 32);
-  temperature.innerHTML = `${fahrTemp}`;
+  temperature.innerHTML = `${fahrTemp}°`;
 }
 
 let c = document.querySelector("#cel");
