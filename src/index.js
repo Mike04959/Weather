@@ -71,15 +71,15 @@ button.addEventListener("click", getLocation, showNewTemp);
 
 function convertCel() {
   event.preventDefault();
-  let celTemp = Math.round(response.data.main.temp);
   let temperature = document.querySelector("#current-temperature");
-  temperature.innerHTML = `${celTemp}°`;
+  let celTemp = 25;
+  temperature.innerHTML = `${celTemp}`;
 }
 function convertFahr() {
   event.preventDefault();
   let temperature = document.querySelector("#current-temperature");
-  let celTemp = Math.round(response.data.main.temp);
-  let fahrTemp = (celTemp * 9) / 5 + 32;
+  let celTemp = 25;
+  let fahrTemp = Math.round((celTemp * 9) / 5 + 32);
   temperature.innerHTML = `${fahrTemp}`;
 }
 
