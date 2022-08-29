@@ -10,7 +10,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = days[now.getDay()];
 let hour = now.getHours();
@@ -32,6 +32,11 @@ function input() {
 }
 
 function showTemperature(response) {
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
   let temperature = Math.round(response.data.main.temp);
   let tempr = document.querySelector("#current-temperature");
   tempr.innerHTML = `${temperature}°`;
@@ -63,3 +68,23 @@ function showNewTemp(response) {
 
 let button = document.querySelector("button");
 button.addEventListener("click", getLocation, showNewTemp);
+
+function convertCel() {
+  event.preventDefault();
+  let temperature = document.querySelector("#current-temperature");
+  let celTemp = 25;
+  temperature.innerHTML = `${celTemp}`;
+}
+function convertFahr() {
+  event.preventDefault();
+  let temperature = document.querySelector("#current-temperature");
+  let celTemp = 25;
+  let fahrTemp = Math.round((celTemp * 9) / 5 + 32);
+  temperature.innerHTML = `${fahrTemp}`;
+}
+
+let c = document.querySelector("#cel");
+let f = document.querySelector("#fahr");
+
+c.addEventListener("click", convertCel);
+f.addEventListener("click", convertFahr);
