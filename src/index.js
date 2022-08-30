@@ -39,9 +39,9 @@ function showTemperature(response) {
     response.data.weather[0].main;
   let temperature = Math.round(response.data.main.temp);
   let tempr = document.querySelector("#current-temperature");
-  document.querySelector("#city").innerHTML = response.data.name;
-  let iconElement = document.querySelector("#iconEl");
-  iconElement.setAttribute(
+  tempr.innerHTML = `${temperature}°`;
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
