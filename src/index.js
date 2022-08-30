@@ -37,9 +37,9 @@ function showTemperature(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-  let temperature = Math.round(response.data.main.temp);
+  celsiusTemperature = Math.round(response.data.main.temp);
   let tempr = document.querySelector("#current-temperature");
-  tempr.innerHTML = `${temperature}°`;
+  tempr.innerHTML = `${celsiusTemperature}°`;
   let icon = document.querySelector("#icon");
   icon.setAttribute(
     "src",
@@ -74,22 +74,25 @@ function showNewTemp(response) {
 let button = document.querySelector("button");
 button.addEventListener("click", getLocation, showNewTemp);
 
-function convertCel() {
+function convertFahr(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#current-temperature");
-  let celTemp = 25;
-  temperature.innerHTML = `${celTemp}°`;
+  let tempr = document.querySelector("#current-temperature");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  tempr.innerHTML = Math.round(fahrenheitTemp);
 }
-function convertFahr() {
+
+function convertCel(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#current-temperature");
-  let celTemp = 25;
-  let fahrTemp = Math.round((celTemp * 9) / 5 + 32);
-  temperature.innerHTML = `${fahrTemp}°`;
+  let tempr = document.querySelector("#current-temperature");
+  tempr.innerHTML = Math.round(celsiusTemperature);
 }
+
+let celsiusTemperature = null;
+
+let f = document.querySelector("#fahr");
+f.addEventListener("click", convertFahr);
 
 let c = document.querySelector("#cel");
-let f = document.querySelector("#fahr");
-
 c.addEventListener("click", convertCel);
-f.addEventListener("click", convertFahr);
+
+search();
