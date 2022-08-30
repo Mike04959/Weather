@@ -23,6 +23,16 @@ h1 {
   font-size: 30px;
 }
 
+.trim {
+  position: relative;
+  bottom: -9px;
+}
+
+.sun {
+  position: relative;
+  top: -11px;
+}
+
 form {
   text-align: right;
 }
