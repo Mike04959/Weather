@@ -47,3 +47,15 @@ form {
   margin: 0;
   text-align: center;
 }
+
+.location {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid #170b0f;
+  box-shadow: 10px 8px 8px 0px #170b0f;
+  font-size: 15px;
+  cursor: pointer;
+}
