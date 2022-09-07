@@ -48,6 +48,10 @@ form {
   text-align: center;
 }
 
+.weather-forecast {
+  text-align: center;
+}
+
 .location {
   display: block;
   margin: 0 auto;

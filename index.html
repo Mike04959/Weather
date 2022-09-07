@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Fascinate&family=Rubik+Moonrocks&display=swap"
       rel="stylesheet"
     />
-    <title>Week 2</title>
+    <title>Weather</title>
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
@@ -63,30 +63,8 @@
           </form>
           <br />
           <hr />
-          <table class="table table-striped my-table">
-            <thead>
-              <tr class="new">
-                <th scope="col">Monday, 20th June</th>
-                <th scope="col">Tuesday, 21st June</th>
-                <th scope="col">Wednesday, 22nd June</th>
-                <th scope="col">Thursday, 23rd June</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="different">
-                <th scope="row">28°/17°</th>
-                <td>29°/17°</td>
-                <td>24°/17°</td>
-                <td>26°/18°</td>
-              </tr>
-              <tr>
-                <th scope="row">🌞</th>
-                <td>⛈</td>
-                <td>☁</td>
-                <td>🌦</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="weather-forecast" id="forecast"></div>
+          <hr />
           <button class="location">Current location</button>
         </div>
       </div>
